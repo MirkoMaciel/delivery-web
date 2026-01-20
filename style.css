@@ -272,8 +272,6 @@ footer p {
 
 /*CSS BEBIDAS*/
 
-.list-products {}
-
 .list-products #cat-drinks-list {
     /* contenedor de la lista de bebidas*/
     display: flex;
@@ -313,7 +311,7 @@ footer p {
 }
 
 .list-products .product-info {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: rgb(30, 30, 30);
 }
 
@@ -325,25 +323,8 @@ footer p {
     font-weight: bold;
 }
 
-.product-scroll-container {
-    display: flex;
-    flex-wrap: nowrap;
-    /* Impide que los productos bajen a la siguiente fila */
-    overflow-x: auto;
-    /* Habilita el scroll horizontal */
-    gap: 15px;
-    padding: 15px 5px;
-    list-style: none;
 
-    /* Suaviza el movimiento en móviles */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
 
-/* Ocultar la barra de scroll para un diseño más limpio */
-.product-scroll-container::-webkit-scrollbar {
-    display: none;
-}
 
 
 /*ESTILOS PARA PANTALLAS MAYORES A 720PX*/
