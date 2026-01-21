@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /*MOBILE FIRS STYLE*/
 
 * {
@@ -12,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
@@ -97,7 +99,17 @@ ul {
 }
 
 header {
-    background-color: rgba(245, 245, 245);
+    /*background-color: rgba(245, 245, 245);*/
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    /* Color de fondo claro y limpio */
+    display: flex;
+    justify-content: space-between;
+    /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para dar profundidad */
 }
 
 header .logo {
@@ -105,7 +117,8 @@ header .logo {
     padding: 25px 30px;
     font-weight: bold;
     color: #25D366;
-    font-size: 3.75em;
+    font-size: 3.5em;
+    text-align: center;
 }
 
 header .container {
@@ -119,6 +132,7 @@ header nav {
     flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
 }
 
 header a {
@@ -152,6 +166,8 @@ header a:hover {
 
 #hero h1 {
     color: white;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 #page-presentation {}
@@ -160,6 +176,7 @@ header a:hover {
     text-align: center;
     padding: 200px 12px;
 }
+
 
 .color-acento {
     color: #25D366;
@@ -310,19 +327,110 @@ footer p {
     border-radius: 8px;
 }
 
-.list-products .product-info {
-    font-size: 1.2em;
+/***   BEBIDAS SCROLL   ***/
+
+/* 1. Contenedor de la lista */
+.list-drinks {
+    display: flex;
+    /* Alinea los productos en línea */
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Fuerza el "imán" en el eje X */
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
+    gap: 15px;
+    /* Espaciado entre productos */
+    padding: 20px;
+    /* Espacio para que las sombras no se corten */
+    list-style: none;
+    /* Quita los puntos de la lista */
+    -webkit-overflow-scrolling: touch;
+    /* Suavidad extra en iOS */
+}
+
+/* 2. Cada tarjeta de producto */
+.product-card {
+    flex: 0 0 85%;
+    /* Ocupa el 85% para que se "asome" el siguiente */
+    scroll-snap-align: center;
+    /* El producto se pega al centro al soltar el dedo */
+
+    /* Estilos visuales */
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* 3. Ajuste de imágenes para que no se desborden */
+.product-card img {
+    width: 100%;
+    /* Se ajusta al ancho de la tarjeta */
+    height: 250px;
+    /* Altura fija para mantener uniformidad */
+    object-fit: contain;
+    /* Evita que la botella se deforme */
+    padding: 10px;
+}
+
+/* 4. Texto e información */
+.product-info {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.product-info h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+    height: 3em;
+    /* Reserva espacio para 2 líneas de texto */
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: #e44d26;
+    font-size: 1.2rem;
+}
+
+/** CSS CIGARRILLO* */
+.list-products #cat-cigarretes-list {
+    /* contenedor de la lista de bebidas*/
+    display: flex;
+    text-align: center;
     color: rgb(30, 30, 30);
+    flex-direction: column;
 }
 
-.list-products h4 {
-    font-weight: bold;
+.list-products #cat-cigarretes-list h3 {
+    font-size: 3.5em;
 }
 
-.list-products .price {
-    font-weight: bold;
+.list-cigarretes {
+    display: flex;
+    /* Alinea los productos en línea */
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Fuerza el "imán" en el eje X */
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
+    gap: 15px;
+    /* Espaciado entre productos */
+    padding: 20px;
+    /* Espacio para que las sombras no se corten */
+    list-style: none;
+    /* Quita los puntos de la lista */
+    -webkit-overflow-scrolling: touch;
+    /* Suavidad extra en iOS */
 }
-
 
 
 
@@ -361,6 +469,7 @@ footer p {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+
     }
 
     #page-presentation .img-container {
@@ -381,5 +490,24 @@ footer p {
     #page-presentation p {
         text-align: center;
         margin-top: 0px;
+    }
+
+
+    .list-drinks {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        padding : 0;
+        max-width: 100%;
+    }
+
+    .list-cigarrates {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        padding : 0;
+        max-width: 100%;
     }
 }
