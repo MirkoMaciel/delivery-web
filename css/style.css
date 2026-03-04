@@ -1,0 +1,347 @@
+body,
+html {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.list-nav-bar a{
+     transition: all 0.25s ease;
+}
+
+.main-social-networks{
+    display: none;
+}
+
+/*
+| Uso              | Color          | Hex         |
+| ---------------- | -------------- | ----------- |
+| Azul principal   | Azul profundo  | **#2563EB** |
+| Violeta acento   | Purple moderno | **#7C3AED** |
+| Fondo oscuro     | Negro suave    | **#0F172A** |
+| Fondo secciones  | Gris oscuro    | **#1E293B** |
+| Texto principal  | Blanco suave   | **#F8FAFC** |
+| Texto secundario | Gris claro     | **#94A3B8** |
+| Hover / detalle  | Azul claro     | **#60A5FA** |
+*/
+
+.header-horarios {
+    display: flex;
+    background-color: #f5f5f5;
+    justify-content: center;
+    font-size: 12px;
+    color: #111;
+}
+
+.img_logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+}
+
+.container-nav-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.container-navbar {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease;
+    background-color: #F1F1F1F1;
+}
+
+.container-navbar.is-open {
+    max-height: 260px;
+}
+
+.container-navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-navbar nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+/* CONTAINTER NAV BUTTONS*/
+
+.container-nav-buttons {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-toggle {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2563EB;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+main{
+    min-height: 100dvh;
+}
+
+/* SECTIONS */
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #2563EB;
+    font-size: 14px;
+}
+
+
+.section-background {
+    width: 100%;
+
+    min-height: 50dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #2563EB;
+    font-size: 12px;
+
+    background-image: url("../assets/img/absolut.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.container-footer-img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    
+    font-weight: bold;
+    color: #111;
+
+    width: 100%;
+    
+    padding: 12px 12px;
+    
+
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-whatsapp{
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  align-items:center;
+  gap:10px;
+
+  background:#1E293B;
+  color:white;
+
+  padding:14px 22px; 
+
+  border-radius:12px;
+
+  text-decoration:none;
+  font-weight:600;
+
+  transition:0.25s;
+}
+
+.btn-whatsapp:hover{
+  background:#2563EB;
+}
+
+/* PRODUCTS */
+
+/*CSS BEBIDAS*/
+
+.list-products{
+    padding: 10px 20px
+}
+
+.list-products #cat-drinks-list , .list-products #cat-cigarretes-list , .list-products #cat-snacks-list , .list-products #cat-soda-list, .list-products #cat-beer-list {
+    /* contenedor de la lista de bebidas*/
+    display: flex;
+    text-align: center;
+    color: #2563EB;
+    flex-direction: column;
+}
+
+.list-products #cat-drinks-list h3,  #cat-cigarretes-list h3 , #cat-snacks-list h3 , #cat-soda-list h3 , #cat-beer-list h3 {
+    font-size: 2.5em;
+    margin: auto;
+}
+
+.list-products .product-card {
+    /* lista de elementos*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+
+/* Imagen del producto */
+.product-card img {
+    width: 250px;
+    /* Tamaño compacto para mobile */
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    /* Evita que la imagen se deforme */
+    border-radius: 8px;
+}
+
+/***   BEBIDAS SCROLL   ***/
+
+/* 1. Contenedor de la lista */
+.list-drinks , .list-cigarretes , .list-snacks , .list-soda , .list-beer{
+    display: flex;
+    /* Alinea los productos en línea */
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Fuerza el "imán" en el eje X */
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
+    gap: 15px;
+    /* Espaciado entre productos */
+    padding: 20px;
+    /* Espacio para que las sombras no se corten */
+    list-style: none;
+    /* Quita los puntos de la lista */
+    -webkit-overflow-scrolling: touch;
+    /* Suavidad extra en iOS */
+}
+
+/* 2. Cada tarjeta de producto */
+.product-card {
+    flex: 0 0 100%;
+    /* Ocupa el 85% para que se "asome" el siguiente */
+    scroll-snap-align: center;
+    /* El producto se pega al centro al soltar el dedo */
+
+    /* Estilos visuales */
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* 3. Ajuste de imágenes para que no se desborden */
+.product-card img {
+    width: 100%;
+    /* Se ajusta al ancho de la tarjeta */
+    height: 250px;
+    /* Altura fija para mantener uniformidad */
+    object-fit: contain;
+    /* Evita que la botella se deforme */
+    padding: 10px;
+}
+
+/* 4. Texto e información */
+.product-info {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.product-info p{
+    margin: auto;
+    color: #111;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.product-info h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #111;
+    height: auto;
+    /* Reserva espacio para 2 líneas de texto */
+    overflow: hidden;
+    font-weight: bold;
+}
+
+
+/* FOOTER CONTANCT*/
+
+#container-contact {
+    text-align: center;
+    padding: 15px 12px;
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1a1a1a;
+    /* Un tono oscuro profesional */
+    color: white;
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+

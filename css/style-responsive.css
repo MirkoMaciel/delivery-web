@@ -1,0 +1,204 @@
+/* =========================
+   Desktop/Tablet upgrades
+   Pegarlo al FINAL de style.css
+   ========================= */
+
+/* Base de paleta (si ya la tenés, podés omitir esto) */
+:root {
+    --bg: #0F172A;
+    --surface: #1E293B;
+    --primary: #2563EB;
+    --accent: #7C3AED;
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+
+}
+
+/* Container “real” en desktop */
+.container {
+    width: min(1100px, 100%);
+    margin-inline: auto;
+    padding-inline: 16px;
+    /* mobile */
+}
+
+
+/* Header y nav: en desktop el menú se vuelve horizontal y visible */
+@media (min-width: 768px) {
+    .container {
+        padding-inline: 24px;
+    }
+
+    /* Barra de header más ordenada */
+    .container-nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    /* Ocultar el botón hamburguesa en tablet/desktop */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* Mostrar nav siempre */
+    .container-navbar {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .nav-bar .list-nav-bar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding: 12px 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-bar .list-nav-bar a {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--text);
+        background: #2563EB;
+        border: 1px solid rgba(148, 163, 184, .25);
+        transition: .2s;
+    }
+
+    .nav-bar .list-nav-bar a:hover {
+        border-color: rgba(37, 99, 235, .55);
+        background: rgba(37, 99, 235, .12);
+    }
+
+    /* Título más grande en tablet */
+    .section-title h3 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    /* Hero: más presencia */
+    .section-background {
+        min-height: 55dvh;
+        border-radius: 18px;
+        overflow: hidden;
+        margin: 12px auto 0;
+        width: min(1100px, 100%);
+    }
+
+    /* Sección “ENCONTRÁ TODO EL STOCK...” + botón: layout en 2 columnas */
+    .container-footer-img .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1024px){
+
+/* ===== SECCIÓN DE CATEGORÍAS ===== */
+
+.list-products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 90%;
+    margin: auto;
+}
+
+/* tarjetas de categorías */
+
+.list-products .container{
+    border-radius: 14px;
+    padding: 18px;
+}
+
+/* ===== LISTAS DE PRODUCTOS ===== */
+
+.product-scroll-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    overflow: visible;
+}
+
+/* ===== CARD DE PRODUCTO ===== */
+
+.product-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* imagen producto */
+
+.product-card img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* info producto */
+
+.product-info h4{
+    font-size: 14px;
+}
+
+.main-social-networks{
+    display: flex;
+    width: auto;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.a-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 8px;
+
+    background: #1E293B;
+    color: #F8FAFC;
+
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: 0.25s;
+
+   
+}
+
+.a-img:hover{
+    background: #2563EB;
+    transform: translateY(-2px);
+}
+
+.section-contact{
+    background-color: #f1f1f1;
+}
+
+
+.header-horarios{
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+}
+
